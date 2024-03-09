@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import TicketingHome from "./components/tickets/TicketingHome";
+import { TicketProvider } from "./components/tickets/context/Ticket.context";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<header className="App-header"> My Header</header>
+
+			<TicketProvider>
+				<TicketingHome />
+			</TicketProvider>
+		</div>
+	);
 }
 
 export default App;
